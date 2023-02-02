@@ -24,7 +24,7 @@ jobs:
     - name: Create release branch
       run: git checkout -b release/${VERSION}
     - name: Push new branch
-      run: git push origin release/v${{ github.event.inputs.versionName }}
+      run: git push origin release/${VERSION}
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
     - name: Push
