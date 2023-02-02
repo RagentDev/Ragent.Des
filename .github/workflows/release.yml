@@ -36,10 +36,10 @@ jobs:
     - name: Upload nuget package to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: target/Ragent.Des.${VERSION}.nupkg
+        file: ./Ragent.Des.${VERSION}.nupkg
         tag: ${{ github.ref }}
     - name: Upload nuget symbol package to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: target/Ragent.Des.${VERSION}.snupkg
+        file: ./Ragent.Des.${VERSION}.snupkg
         tag: ${{ github.ref }}
