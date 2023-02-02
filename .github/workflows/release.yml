@@ -33,3 +33,13 @@ jobs:
       run: git checkout -b release/${VERSION} ${TAG_NAME}
     - name: Push new branch
       run: git push origin release/${VERSION}
+    - name: Upload nuget package to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        file: Ragent.Des.${VERSION}.nupkg
+        tag: ${{ github.ref }}
+    - name: Upload nuget symbol package to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        file: Ragent.Des.${VERSION}.snupkg
+        tag: ${{ github.ref }}
