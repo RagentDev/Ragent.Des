@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragent.Des", "Ragent.Des\Ragent.Des.csproj", "{6A9130C0-5DFD-4A6B-8237-068CFC42C8DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragent.Des.Tests", "Ragent.Des.Tests\Ragent.Des.Tests.csproj", "{D966EE2D-5E9E-4576-95F5-6326F8D72074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A9130C0-5DFD-4A6B-8237-068CFC42C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9130C0-5DFD-4A6B-8237-068CFC42C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9130C0-5DFD-4A6B-8237-068CFC42C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9130C0-5DFD-4A6B-8237-068CFC42C8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
