@@ -20,5 +20,5 @@ jobs:
     - name: Upload nuget symbol package to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: target/release/Ragent.Des.0.0.8.nupkg
+        file: /Ragent.Des.0.0.8.nupkg
         tag: v0.0.7
