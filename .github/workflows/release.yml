@@ -15,17 +15,19 @@ jobs:
       run: |
         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
         git branch --remote --contains | grep origin/main
+    - name: Set Tag Name
+      run: echo "TAG_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
     - name: Set VERSION variable from tag
       run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
     - name: Build
       run: dotnet build --configuration Release /p:Version=${VERSION}
     - name: Test
       run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
-    - name: Create release branch
-      run: git checkout -b release/${VERSION}
-    - name: Push new branch
-      run: git push origin release/${VERSION}
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
     - name: Push
-      run: dotnet nuget push Ragent.Des.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${secrets.NUGET_API_KEY}
+      run: dotnet nuget push Ragent.Des.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+    - name: Create release branch
+      run: git checkout -b release/${VERSION} ${TAG_NAME}
+    - name: Push new branch
+      run: git push origin release/${VERSION}
