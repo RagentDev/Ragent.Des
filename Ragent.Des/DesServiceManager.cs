@@ -1,85 +1,34 @@
-﻿using System.Collections.ObjectModel;
-using System.Reflection;
-using Ragent.Des.Interfaces;
+﻿using Ragent.Des.Interfaces;
 
 namespace Ragent.Des;
 
 public class DesServiceManager : IDesServiceManager
 {
-    // TODO: Separate Managers
-    // DesManager - Top level
-    // DesServiceManager - inside DesManager
-    // DesEventManager - inside DesManager
-    private readonly ReadOnlyDictionary<Type, Type> _typeMappings;
+    private readonly DesManager _desManager;
     private readonly Dictionary<Type, object> _services;
-    private readonly Dictionary<Type, EventInfo[]> _events;
 
-    public DesServiceManager(IDictionary<Type, Type> types)
+    public DesServiceManager(DesManager desManager, Dictionary<Type, Type> mapping, Dictionary<Type, object> existing)
     {
-        _typeMappings = new ReadOnlyDictionary<Type, Type>(types);
+        _desManager = desManager;
         _services = new Dictionary<Type, object>();
-        _events = new Dictionary<Type, EventInfo[]>();
+
+        foreach (var map in mapping.Where(pair => !_services.ContainsKey(pair.Key)))
+        {
+            CreateService(map.Key, map.Value);
+        }
         
-        foreach (var keyValuePair in _typeMappings.Where(pair => !_services.ContainsKey(pair.Key)))
+        foreach (var keyPair in existing)
         {
-            InternalCreateServiceFromType(keyValuePair.Key, keyValuePair.Value);
-        }
-        foreach (var keyValuePair in _typeMappings)
-        {
-            InternalCreateEventsFromType(keyValuePair.Key, keyValuePair.Value);
-        }
-    }
-    
-    public TI GetService<TI>()
-    {
-        return (TI)_services[typeof(TI)];
-    }
-
-    public TI RemoveService<TI>()
-    {
-        throw new NotImplementedException();
-    }
-
-    public TI RecycleService<TI>()
-    {
-        throw new NotImplementedException();
-    }
-
-    public void RegisterEvent<TI, TE>(Action<TE> callback)
-    {
-        var eventInfo = InternalGetEventInfo(typeof(TI), typeof(TE));
-
-        if (eventInfo.EventHandlerType != null)
-        {
-            eventInfo.AddEventHandler(_services[typeof(TI)], 
-                Delegate.CreateDelegate(eventInfo.EventHandlerType, callback.Target, callback.Method));
-        }
-        else
-        {
-            throw new Exception();
+            _services.Add(keyPair.Key, keyPair.Value);
         }
     }
 
-    private EventInfo InternalGetEventInfo(Type inter, Type obj)
+    public object GetService(Type inter)
     {
-        return _events[inter].Single(e => e.EventHandlerType.GenericTypeArguments[0] == obj) ?? throw new Exception();
+        return _services[inter];
     }
-    
-    private object InternalResolveMissingService(Type obj)
-    {
-        if (_typeMappings.TryGetValue(obj, out var inter))
-        {
-            if (_services.TryGetValue(inter, out var instance))
-                return instance;
-            
-            InternalCreateServiceFromType(inter, obj);
-        }
 
-        if (inter != null) return _services[inter];
-        throw new Exception();
-    }
-    
-    private void InternalCreateServiceFromType(Type inter, Type obj)
+    private void CreateService(Type inter, Type obj)
     {
         var constructors = obj.GetConstructors();
 
@@ -104,10 +53,17 @@ public class DesServiceManager : IDesServiceManager
             _services.Add(inter, instance);
         }
     }
-
-    private void InternalCreateEventsFromType(Type inter, Type obj)
+    
+    private object InternalResolveMissingService(Type obj)
     {
-        var events = obj.GetEvents();
-        _events.Add(inter, events);
+        if (_desManager.GetServiceMapping(obj, out var inter))
+        {
+            if (_services.TryGetValue(inter, out var instance))
+                return instance;
+            
+            CreateService(inter, obj);
+        }
+        
+        throw new Exception();
     }
 }

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Ragent.Des.Interfaces;
 using Ragent.Des.Tests.Services;
 using Ragent.Des.Tests.Services.Events;
 using Ragent.Des.Tests.Services.Interfaces;
@@ -8,16 +9,16 @@ namespace Ragent.Des.Tests;
 public class Tests
 {
 
-    private DesServiceManager _serviceManager;
+    private IDesManager _manager;
     
     [SetUp]
     public void Setup()
     {
-        _serviceManager = new DesServiceBuilder()
+        _manager = new DesBuilder()
             .AddService<IScoreService, ScoreService>()
             .Build();
         
-        _serviceManager.RegisterEvent<IScoreService, EventScoreAdded>(ScoreChanged);
+        _manager.RegisterEvent<IScoreService, EventScoreAdded>(ScoreChanged);
     }
 
     private void ScoreChanged(EventScoreAdded scoreAdded)
@@ -28,7 +29,7 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var scoreService = _serviceManager.GetService<IScoreService>();
+        var scoreService = _manager.GetService<IScoreService>();
 
         var stopWatch = new Stopwatch();
         
@@ -40,6 +41,6 @@ public class Tests
         scoreService.AddScore(1);
         stopWatch.Stop();
         
-        Assert.Pass();
+        Assert.That(scoreService.GetScore(), Is.EqualTo(38));
     }
 }

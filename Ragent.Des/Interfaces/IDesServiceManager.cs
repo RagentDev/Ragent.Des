@@ -2,11 +2,5 @@
 
 public interface IDesServiceManager
 {
-    public TI GetService<TI>();
-
-    public TI RemoveService<TI>();
-
-    public TI RecycleService<TI>();
-
-    public void RegisterEvent<TI, TE>(Action<TE> callback);
+    public object GetService(Type inter);
 }

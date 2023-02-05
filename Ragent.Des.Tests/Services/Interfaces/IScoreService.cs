@@ -3,4 +3,5 @@
 public interface IScoreService
 {
     public void AddScore(int amount);
+    public int GetScore();
 }
