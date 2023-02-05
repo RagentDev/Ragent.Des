@@ -43,4 +43,10 @@ public class Tests
         
         Assert.That(scoreService.GetScore(), Is.EqualTo(38));
     }
+
+    [Test]
+    public void Test2()
+    {
+        Assert.Pass();
+    }
 }
