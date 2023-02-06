@@ -16,12 +16,7 @@ public class DesManager : IDesManager
         return (T) _desService.GetService(typeof(T));
     }
 
-    public T RemoveService<T>()
-    {
-        throw new NotImplementedException();
-    }
-
-    public T RecycleService<T>()
+    public bool RecycleService<T>()
     {
         throw new NotImplementedException();
     }

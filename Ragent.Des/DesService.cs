@@ -32,6 +32,20 @@ public class DesService
 
         throw new DesServiceMissingException(interfaceType);
     }
+
+    public bool RecycleService(Type interfaceType)
+    {
+        if (_services.ContainsKey(interfaceType))
+        {
+            // _services.Remove(interfaceType);
+            // need to be careful of dependency injected services
+            // also services which have events that places subscribe to
+            // we should throw exceptions if the service has an event - we can't recycle these
+            // we should throw exceptions if this service is injected into any others - we can't recycle these
+        }
+
+        return false;
+    }
     
     public void RegisterEvent(Type interfaceType, Type eventType, object callbackTarget, MethodInfo callbackMethod)
     {
