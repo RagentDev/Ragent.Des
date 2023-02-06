@@ -1,4 +1,5 @@
-﻿using Ragent.Des.Tests.Builder.Interfaces;
+﻿using Ragent.Des.Exceptions;
+using Ragent.Des.Tests.Builder.Interfaces;
 using Ragent.Des.Tests.Builder.Services;
 
 namespace Ragent.Des.Tests.Builder;
@@ -75,9 +76,13 @@ public class BuildTests
 
             Assert.Fail();
         }
+        catch (DesDuplicatedServiceException ex)
+        {
+            Assert.That(ex, Is.InstanceOf<DesDuplicatedServiceException>());
+        }
         catch (Exception ex)
         {
-            Assert.That(ex, Is.InstanceOf<Exception>());
+            Assert.Fail();
         }
     }
     

@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Ragent.Des.Exceptions;
 
 namespace Ragent.Des;
 
@@ -29,8 +30,7 @@ public class DesService
         if (_services.TryGetValue(interfaceType, out var obj))
             return obj;
 
-        // Throws DesServiceNotFound Exception
-        throw new Exception();
+        throw new DesServiceMissingException(interfaceType);
     }
     
     public void RegisterEvent(Type interfaceType, Type eventType, object callbackTarget, MethodInfo callbackMethod)
@@ -44,8 +44,7 @@ public class DesService
         }
         else
         {
-            // Throw DesEventExistence
-            throw new Exception();
+            throw new DesEventMissingException(eventType);
         }
     }
     
@@ -60,8 +59,7 @@ public class DesService
         }
         else
         {
-            // Throw DesEventExistence
-            throw new Exception();
+            throw new DesEventMissingException(eventType);
         }
     }
     
@@ -88,12 +86,11 @@ public class DesService
         }
         catch (MissingMethodException)
         {
-            // Throw DesConstructorException
-            throw new Exception();
+            throw new DesConstructorException(objectType);
         }
     }
 
-    private void CreateServiceWithConstructor(ConstructorInfo[] constructorInfos, Type interfaceType, Type objectType)
+    private void CreateServiceWithConstructor(IEnumerable<ConstructorInfo> constructorInfos, Type interfaceType, Type objectType)
     {
         var created = false;
         
@@ -133,8 +130,7 @@ public class DesService
             CreateService(inter, obj);
         }
         
-        // Throw DesServiceNotFound
-        throw new Exception();
+        throw new DesServiceMissingException(obj);
     }
     
     private EventInfo GetEventInfo(Type inter, Type obj)
