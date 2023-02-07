@@ -5,6 +5,7 @@
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/RagentDev/Ragent.Des</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -12,6 +13,7 @@
 
     <ItemGroup>
         <None Include="../README.md" Pack="true" PackagePath="\" />
+        <None Include="../icon.png" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
