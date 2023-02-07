@@ -1,8 +1,6 @@
 # Ragent.Des
 Dependency Injection, Events, Services
 
-![icon](https://user-images.githubusercontent.com/100949170/217240027-66e1f0cb-3ce4-431a-9834-071684bba318.png)
-
 ### Use Des Builder to create Des Manager
 ```C#
 public class ExampleForReadme
