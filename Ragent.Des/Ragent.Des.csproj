@@ -6,14 +6,19 @@
         <RepositoryUrl>https://github.com/RagentDev/Ragent.Des</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
-        <TargetFramework>net6.0;netstandard2.0;net462</TargetFramework>
+        <TargetFrameworks>net472;net6.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
         <None Include="../README.md" Pack="true" PackagePath="\" />
         <None Include="../icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Net.Http" Version="4.3.4" />
     </ItemGroup>
 
 </Project>

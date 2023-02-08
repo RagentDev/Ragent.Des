@@ -1,10 +1,49 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6dda9649_002D83fd_002D4ce5_002Db547_002D134b471abaea/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0bb22138_002D0157_002D4b4c_002D8fa4_002D188750d5fba3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::net7.0::Ragent.Des.Tests.Tests.Test1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::net7.0::Ragent.Des.Tests.Builder.BuildTests.AddServiceWithType&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::net7.0::Ragent.Des.Tests.Builder.BuildTests.AddServiceObjectWithType&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::net7.0::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ab68911_002D8a00_002D49dd_002Dac7a_002D1b22e78f8c21/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BuildTests #9" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::net6.0::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=32857ce7_002Dbb5b_002D4f20_002Da09d_002Df7033464ba88/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=397cd5d4_002D9712_002D4237_002D8b28_002Ddb31bd102240/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=426a4b7c_002D9c5f_002D4cfc_002D8153_002D1f8b31e2731b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=43ef2f2d_002D6f00_002D486e_002D808b_002Dac727817bc7d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4e04057a_002D2bd5_002D4390_002Dacf9_002D341c89424791/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=995661f7_002Db898_002D4484_002Db3bd_002D58e1e399053b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c258b6cd_002D5c50_002D4972_002D9cc9_002Df07845d8689d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BuildTests #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D966EE2D-5E9E-4576-95F5-6326F8D72074::.NETFramework,Version=v4.7.2::Ragent.Des.Tests.Builder.BuildTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Ragent/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -1,4 +1,5 @@
-﻿using Ragent.Des.Exceptions;
+﻿using NUnit.Framework;
+using Ragent.Des.Exceptions;
 using Ragent.Des.Tests.Builder.Interfaces;
 using Ragent.Des.Tests.Builder.Services;
 

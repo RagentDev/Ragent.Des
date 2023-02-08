@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragent.Des", "Ragent.Des\Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragent.Des.Tests", "Ragent.Des.Tests\Ragent.Des.Tests.csproj", "{D966EE2D-5E9E-4576-95F5-6326F8D72074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragent.Des.Examples", "Ragent.Des.Examples\Ragent.Des.Examples.csproj", "{FB5B7F06-1C9E-4636-B63C-CFC88F281CFE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D966EE2D-5E9E-4576-95F5-6326F8D72074}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB5B7F06-1C9E-4636-B63C-CFC88F281CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB5B7F06-1C9E-4636-B63C-CFC88F281CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB5B7F06-1C9E-4636-B63C-CFC88F281CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB5B7F06-1C9E-4636-B63C-CFC88F281CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
