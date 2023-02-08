@@ -1,6 +1,8 @@
 # Ragent.Des
 Dependency Injection, Events, Services
 
+[![](https://dcbadge.vercel.app/api/server/qfU23sXBmy)](https://discord.gg/qfU23sXBmy)
+
 ### Use Des Builder to create Des Manager
 ```C#
 public class ExampleForReadme
