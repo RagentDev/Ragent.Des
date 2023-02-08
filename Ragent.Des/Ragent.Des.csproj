@@ -6,7 +6,7 @@
         <RepositoryUrl>https://github.com/RagentDev/Ragent.Des</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net6.0;netstandard2.0;net462</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
